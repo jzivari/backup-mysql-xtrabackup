@@ -11,9 +11,9 @@ source /opt/scripts/backup/mysql_files_backup.sh
 ## Full and Incremental variables
 TMPFILE="/tmp/xtrabackup-runner.$$.tmp"
 USEROPTIONS="--user=backup --password=****"
-BACKUP_DIR=/backup/mysql/mysql8/production-mysql/$(date +\%Y-\%m-\%d)
+BACKUP_DIR=/backup/mysql/mysql8/production-mysql/$HOSTNAME/$(date +\%Y-\%m-\%d)
 LOG_DIR=/var/log/mysql/backup-script/$(date +\%Y-\%m-\%d)
-LOCAL_BACKUP_DIR="/backup/mysql/mysql8/production-mysql/"
+LOCAL_BACKUP_DIR="/backup/mysql/mysql8/production-mysql/$HOSTNAME"
 
 ##Restore
 #CURRENT_DAY=`date --date="6 days ago" +%Y-%m-%d`
